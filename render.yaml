@@ -1,9 +1,6 @@
 services:
-  - type: static
-    name: yoroxy
-    plan: free
-    repo: https://github.com/Yosshy-Stash/Choco-Chat.git
-    branch: main
-    rootDir: .
-    buildCommand: ""
+  - type: web
+    name: choco-chat
+    runtime: static
+    buildCommand: yarn build
     staticPublishPath: .
