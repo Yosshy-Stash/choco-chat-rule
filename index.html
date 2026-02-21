@@ -1832,12 +1832,21 @@
     });
 
     function setReplyTo(data) {
+      const messageElement = document.querySelector(`[data-id="${data.id}"]`);
+      const currentText =
+        messageElement?.querySelector('.message-text')?.textContent ?? '';
+
       replyToMessage = {
         id: data.id,
         username: data.username,
-        message: data.message
+        message: currentText
       };
-      replyToText.textContent = `${data.username}に返信: ${data.message.substring(0, 30)}${data.message.length > 30 ? '...' : ''}`;
+
+      replyToText.textContent =
+        `${data.username}に返信: ${
+          currentText.slice(0, 30)
+        }${currentText.length > 30 ? '...' : ''}`;
+
       replyPreview.classList.remove('hidden');
       messageInput.focus();
     }
