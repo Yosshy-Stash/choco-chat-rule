@@ -1277,7 +1277,7 @@
 
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
   <script>
-    const socket = io('https://choco-chat.yosshy.f5.si', {
+    const socket = io('https://choco-chat-by-yosshy.onrender.com', {
       transports: ['websocket', 'polling'],
       reconnection: true,
       reconnectionAttempts: Infinity,
@@ -1303,7 +1303,7 @@
     let currentProfile = null;
     let isAdmin = false;
     let isPrivilegedAdmin = false;
-    const PRIVILEGED_ADMIN_USERS = ['ばなな', 'ばななの左腕', 'チョコわかめ', 'ばななの右腕', 'woolisbest#plus','Yosshy#管理者もどき'];
+    const PRIVILEGED_ADMIN_USERS = ['ばなな', 'ばななの左腕', 'チョコわかめ', 'ばななの右腕', 'woolisbest#plus', 'Yosshy#管理者もどき'];
     let replyToMessage = null;
     let editingMessageId = null;
     let openMenuId = null;
